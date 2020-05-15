@@ -3,6 +3,16 @@ import store from "../store.js";
 
 //Public
 class ListService {
+  deleteItem(listid, index) {
+    let list = store.State.lists.find(l => l.id == listid)
+    list.items.splice(index, 1)
+    store.saveState()
+
+  }
+  deleteList(id) {
+    store.State.lists = store.State.lists.filter(l => l.id != id)
+    store.saveState()
+  }
   addItem(item, itemId) {
     let list = store.State.lists.find(l => l.id == itemId)
     list.items.push(item)

@@ -27,8 +27,11 @@ export default class ListController {
     ListService.addList(rawList)
     _drawLists();
   }
-  deleteList() {
-
+  deleteList(id) {
+    if (window.confirm("are you sure you want to delete this List?")) {
+      ListService.deleteList(id)
+      _drawLists()
+    }
   }
   addItem(event, itemId) {
     event.preventDefault()
@@ -36,6 +39,13 @@ export default class ListController {
     ListService.addItem(item, itemId)
     _drawLists()
   }
+  deleteItem(id, index) {
+    if (window.confirm("are you sure you want to delete this item?")) {
+      ListService.deleteItem(id, index)
+      _drawLists()
+    }
 
+
+  }
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }
