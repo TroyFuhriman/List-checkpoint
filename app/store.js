@@ -2,7 +2,9 @@ import List from "./Models/List.js";
 
 let _state = {
   /** @type {List[]} */
-  lists: []
+  lists: [
+    new List({ title: "Shopping List", color: "#f39698", items: [] })
+  ]
 };
 
 //NOTE You should not need to change the code from this point down
@@ -18,6 +20,9 @@ function _loadState() {
 _loadState();
 
 class Store {
+  addList(list) {
+    _state.lists.push(list)
+  }
   /**
    * Provides access to application state data
    */
