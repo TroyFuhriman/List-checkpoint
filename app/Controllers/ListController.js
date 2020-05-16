@@ -44,8 +44,25 @@ export default class ListController {
       ListService.deleteItem(id, index)
       _drawLists()
     }
-
-
   }
+
+  // popup(){
+  //   swal({
+  //     title: "Are you sure?",
+  //     text: "Once deleted, you will not be able to recover this imaginary file!",
+  //     icon: "warning",
+  //     buttons: true,
+  //     dangerMode: true,
+  //   })
+  //   .then((willDelete) => {
+  //     if (willDelete) {
+  //       swal("Poof! Your imaginary file has been deleted!", {
+  //         icon: "success",
+  //       });
+  //     } else {
+  //       swal("Your imaginary file is safe!");
+  //     }
+  //   });
+  // }
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

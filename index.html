@@ -25,7 +25,7 @@
       <div class="col-md-7 offset-0 offset-md-2">
         <form onsubmit="app.listController.addList(event)">
           <div class="input-group  mt-3">
-            <input type="text" class="form-control" id="title" placeholder="List Title...">
+            <input type="text" class="form-control" id="title" required placeholder="List Title...">
             <div class="input-group-append">
               <input type="color" id="color" value="#f39698" class="ml-2 mr-2 mt-1">
               <button class="btn btn-outline-success rounded" type="submit"><i class="fas fa-plus text-secondary"
@@ -36,29 +36,6 @@
       </div>
     </div>
     <div class="row" id="lists">
-      <!-- <div class="col-md-3 col-12 mt-3">
-        <div class="card shadow">
-          <div class="card-top text-center bg-secondary text-light d-flex flex-column"
-            style="background-color: ${color} !important;">
-            <i class="fas fa-minus-square text-warning align-self-end pr-1 pt-1" aria-hidden="true"></i>
-            <h5>Shopping List </h5>
-          </div>
-          <div class="card-body">
-            <ul class="card-text bullet-change row">
-              <li class="col-6 p-0">Sugar </li><i class="far fa-minus-square text-danger text-center col-1 offset-3"
-                aria-hidden="true"></i>
-            </ul>
-          </div>
-          <form class="input-group mb-3 pl-3 pr-3" onsubmit="app.controller.addItem(event)">
-            <input type="text" class="form-control" placeholder="list item...">
-            <div class="input-group-append">
-              <button class="btn btn-outline-success" type="submit" id="button-addon2"><i
-                  class="fas fa-plus text-secondary" aria-hidden="true"></i></button>
-            </div>
-          </form>
-        </div>
-      </div> -->
-
     </div>
     </div>
   </main>
