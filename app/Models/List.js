@@ -17,7 +17,7 @@ export default class List {
     <div class="card shadow">
       <div class="card-top text-center bg-secondary text-light d-flex flex-column"
         style="background-color: ${this.color} !important;">
-        <i onclick="app.listController.deleteList('${this.id}')" class="fas fa-minus-square text-warning align-self-end pr-1 pt-1 hover" aria-hidden="true"></i>
+        <i onclick="app.listController.deleteList('${this.id}')" class="fas pointer fa-minus-square text-warning align-self-end pr-1 pt-1 hover" aria-hidden="true"></i>
         <h5>${this.title} </h5>
       </div>
       <div class="card-body">
@@ -40,7 +40,7 @@ export default class List {
     let template = ""
     this.items.forEach((item, index) => {
       template += /*html*/`
-      <li class="col-6 p-0">${item} </li> <i class="far fa-minus-square text-danger action text-center col-1 offset-3" 
+      <li class="col-6 p-0">${item} </li> <i class="far fa-minus-square text-danger action text-center pointer col-1 offset-3" 
       onclick= "app.listController.deleteItem('${this.id}', ${index})"
             aria-hidden="true"></i>`
     })
