@@ -2,9 +2,7 @@ import List from "./Models/List.js";
 
 let _state = {
   /** @type {List[]} */
-  lists: [
-    new List({ title: "Shopping List", color: "#f39698", items: [] })
-  ]
+  lists: []
 };
 
 //NOTE You should not need to change the code from this point down
