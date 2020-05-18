@@ -4,6 +4,7 @@ import _store from "../store.js";
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
   let lists = _store.State.lists
+  debugger
   let template = ''
   lists.forEach(l => template += l.Template)
   document.getElementById("lists").innerHTML = template;

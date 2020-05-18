@@ -5,7 +5,7 @@ export default class List {
     //TODO Your constructor takes in a data object that should have the properties you need to create your list here is a freebie, it will set the id its provided, or if that is undefined it will create a new one (this is an alternative to object destructuring)
     this.id = data.id || generateId();
     this.title = data.title;
-    this.items = []
+    this.items = data.items || []
     this.color = data.color || "#f39699"
   }
   //Be sure to add the methods needed to create the view template for this model
